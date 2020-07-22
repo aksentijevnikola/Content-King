@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Project_2</title>
+  <meta name="keywords" content="Project_2">
+  <meta name="description" content="Project_2">
+  <meta name="author" content="Project_2">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/query.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/105f150b86.js" crossorigin="anonymous"></script> 
+</head>
+
+<body>
+  <div class="template-wrapper">
+    <div class="landing-dots dots-text-left"></div>
+    <div class="landing-dots dots-text-right"></div>
+    <div class="template-container">
+      <div class="form-container page-1">
+        <form class="form-one">
+          <label class="form-label version-number font-16">
+            <div class="star"><i class="fas fa-asterisk"></i></div>(v.1)
+          </label>
+
+          <label class="form-label font-16">
+            <div class="star"><i class="fas fa-asterisk"></i></div>Headline
+          </label>
+          <div class="headline-input-wrapper">
+            <div class="warning-container"></div>
+            <input type="text" class="form-input headline-input" onKeyDown="limitText(this,36);" onKeyUp="limitText(this,36);">
+          </div>
+
+          <label class="ingress-label  font-12">
+            <div class="star"><i class="fas fa-asterisk"></i></div>Ingress text...
+          </label>
+          <div class="text-area-one-wrapper">
+            <textarea class="form-textarea text-area-one" cols="30" rows="8" onKeyDown="limitText(this,351);" onKeyUp="limitText(this,351);"></textarea>
+          </div>
+            <div class="warning-container"></div>
+
+          <label class="form-label font-16">
+            <div class="star"><i class="fas fa-asterisk"></i></div>SubHead
+          </label>
+          <div class="subhead-input-wrapper">
+            <div class="warning-container"></div>
+            <input type="text" class="form-input subhead-input" onKeyDown="limitText(this,46);" onKeyUp="limitText(this,46);">
+          </div>
+
+          <label class="ingress-label font-12">
+            <div class="star"><i class="fas fa-asterisk"></i></div>Ingress text...
+          </label>
+          <div class="text-area-two-wrapper">
+            <div class="warning-container"></div>
+            <textarea class="form-textarea text-area-two" cols="30" rows="8" onKeyDown="limitText(this,351);" onKeyUp="limitText(this,351);"></textarea>
+          </div>
+          <button class="btn-primary sendBtn">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
+

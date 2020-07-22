@@ -1,0 +1,1082 @@
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+*,
+*::after,
+*::before {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'Futura Lt BT';
+  src        : url('../../fonts/FuturaBT-Light.eot');
+  src        : url('../../fonts/FuturaBT-Light.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/FuturaBT-Light.woff2') format('woff2'),
+    url('../../fonts/FuturaBT-Light.woff') format('woff'),
+    url('../../fonts/FuturaBT-Light.ttf') format('truetype'),
+    url('../../fonts/FuturaBT-Light.svg#FuturaBT-Light') format('svg');
+  font-weight: 300;
+  font-style : normal;
+}
+
+@font-face {
+  font-family: 'Futura Md BT';
+  src        : url('../../fonts/FuturaBT-Medium.eot');
+  src        : url('../../fonts/FuturaBT-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/FuturaBT-Medium.woff2') format('woff2'),
+    url('../../fonts/FuturaBT-Medium.woff') format('woff'),
+    url('../../fonts/FuturaBT-Medium.ttf') format('truetype'),
+    url('../../fonts/FuturaBT-Medium.svg#FuturaBT-Medium') format('svg');
+  font-weight: 500;
+  font-style : normal;
+}
+
+html {
+  font-size   : 62.5%;
+  overflow-x  : hidden;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  box-sizing : border-box;
+  color      : white;
+  line-height: 1.7;
+}
+
+/* ----------------------------------------------- */
+/* LANDING PAGE */
+/* ----------------------------------------------- */
+
+.landing-header {
+  background-image   : linear-gradient(181deg, #384557 0%, #242C3700 100%), url('../img/Canva\ -\ Let\'s\ write\ a\ story@2x.jpg');
+  background-position: center;
+  background-size    : cover;
+  background-repeat  : no-repeat;
+  height             : 100vh;
+  position           : relative;
+}
+
+.landing-dots,
+.content-dots-right,
+.content-dots-left {
+  background-image: radial-gradient(#FAFAFA 9%, transparent 18%);
+  position        : absolute;
+  background-size : 2.1rem 1.8rem;
+}
+
+.content-dots-left {
+  bottom: 0;
+  left  : 0;
+  height: 56.7vh;
+  width : 7.1rem;
+}
+
+.content-dots-right {
+  bottom: 0;
+  right : 0;
+  height: 31.5vh;
+  width : 6.3rem;
+}
+
+.landing-dots {
+  bottom: 0;
+  right : 0;
+  height: 43vh;
+  width : 12.6rem;
+}
+
+.landing-circule {
+  border       : 2px solid white;
+  border-radius: 50%;
+  position     : absolute;
+  top          : -44vh;
+  left         : -47vw;
+  width        : 69vw;
+  height       : 110vh;
+}
+
+.landing-header-box {
+  position         : absolute;
+  top              : 46.5%;
+  left             : 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform        : translate(-50%, -50%);
+  white-space      : nowrap;
+  text-align       : center;
+}
+
+.landing-heading-h1 {
+  margin-bottom: 8.3rem;
+}
+
+.heading-main {
+  display    : block;
+  font-family: 'Futura Md BT';
+  font-weight: 500;
+  font-size  : 12rem;
+  line-height: 1;
+}
+
+.heading-sub {
+  display    : block;
+  font-family: 'Futura Lt BT';
+  font-weight: 300;
+  font-size  : 3.5rem;
+}
+
+.landing-nav-box {
+  display         : -webkit-box;
+  display         : flex;
+  -webkit-box-pack: space-evenly;
+  justify-content : space-evenly;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  background     : #82D173;
+  font-size      : 2.5rem;
+  border-radius  : 1rem;
+  font-family    : 'Futura Md BT';
+  font-weight    : 500;
+  color          : white;
+  border         : none;
+  cursor         : pointer;
+  text-decoration: none;
+  line-height    : 1.3;
+}
+
+.btn:hover {
+  color: #33522D
+}
+
+.btn:active {
+  outline: none
+}
+
+.btn-left {
+  padding: 1.2rem 5.4rem
+}
+
+.btn-mid {
+  padding: 1.2rem 4.4rem
+}
+
+.btn-right {
+  padding: 1.2rem 2.9rem
+}
+
+
+/* ----------------------------------------------- */
+/* CONTENT KING PAGE */
+/* ----------------------------------------------- */
+
+.content-header {
+  background-image   : url('../img/king@2x\ \(2\).png');
+  background-position: center;
+  background-size    : cover;
+  background-repeat  : no-repeat;
+  height             : 44vh;
+  position           : relative;
+}
+
+.content-circule {
+  position     : absolute;
+  border-radius: 50%;
+  top          : 48.8vh;
+  left         : 73.5vw;
+  width        : 69vw;
+  height       : 110vh;
+  border       : 2px solid #FFFFFF;
+}
+
+.content-overlay {
+  background: #82D173;
+  z-index   : 30;
+  position  : relative;
+  overflow  : hidden;
+}
+
+.content-heading-h1 {
+  position         : absolute;
+  top              : 53%;
+  left             : 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform        : translate(-50%, -50%);
+  white-space      : nowrap;
+  text-align       : center;
+}
+
+.content-links {
+  background-color: #D5D5D5;
+  height          : 56vh;
+  text-align      : center;
+}
+
+.content-heading-h2 {
+  font-size     : 5.5rem;
+  color         : #384557;
+  padding-top   : 8.3vh;
+  padding-bottom: 11vh;
+  font-weight   : 600;
+}
+
+.content-order {
+  display         : -webkit-box;
+  display         : flex;
+  -webkit-box-pack: center;
+  justify-content : center;
+  flex-wrap       : wrap;
+  font-size       : 3.5rem;
+  list-style      : none;
+  position        : relative;
+  z-index         : 20;
+  width           : 90%;
+  margin          : 0 auto;
+}
+
+.content-order li:not(:last-child) {
+  margin-right: 4.2rem
+}
+
+.content-order li a:link,
+.content-order li a:visited {
+  text-decoration   : none;
+  color             : #384557;
+  -webkit-transition: all 0.2s;
+  transition        : all 0.2s;
+}
+
+.content-order li a:hover,
+.content-order li a:active {
+  border-bottom: 2px solid #6ED069;
+  color        : #6ED069;
+}
+ 
+/* ----------------------------------------------- */
+/* LOGIN PAGE */
+/* ----------------------------------------------- */
+
+.login-wrapper {
+  display: flex;
+}
+.login-main-background {
+  background: url("../img/Login/63.jpg") no-repeat;
+  height: 100vh;
+  width: 57%;
+  z-index: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+}
+.login-main-heading {
+  margin-top: 179px;
+  margin-bottom: 11px;
+}
+.login-main-background .login-main-heading {
+  text-align: center;
+  z-index: 10;
+  letter-spacing: 0;
+  color: #ffffff;
+  opacity: 1;
+  font-family: "Futura Md BT";
+  font-size: 89px;
+  height: 107px;
+  margin-bottom: 21px;
+}
+.login-main-background .login-main-desc {
+  align-self: center;
+  z-index: 10;
+  font-family: "Futura Lt BT";
+  letter-spacing: 1.32px;
+  color: #ffffff;
+  opacity: 1;
+  font-size: 33px;
+  height: 40px;
+  width: 520px;
+}
+
+.login-main-background:after {
+  content: "";
+  background: rgba(56, 69, 87, 1) 0% 0% no-repeat padding-box;
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.73;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 1;
+  position: absolute;
+}
+.dots-positioning-background {
+  background-size: 2.3rem 2rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 444px;
+  height: 115px;
+  opacity: 0.7;
+  z-index: 10;
+}
+
+.dots-positioning-form {
+  background-size: 2.3rem 2rem;
+  position: absolute;
+  top: -138px;
+  right: 0;
+  width: 360px;
+  height: 395px;
+  opacity: 0.7;
+  z-index: 10;
+}
+.dots {
+  background-image: radial-gradient(#fafafa 12%, transparent 18%);
+  position: absolute;
+}
+.login-form-div {
+  width: 43%;
+  background: #d5d5d5 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Login-form {
+  align-self: center;
+  margin-top: 250px;
+}
+
+.Login-form input {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 3px 3px 20px #00000029;
+  border-radius: 10px;
+  opacity: 1;
+  width: 412px;
+  height: 61px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  color: #384557;
+  text-align: left;
+  letter-spacing: 0;
+  text-align: left;
+  border: none;
+}
+
+.forgot-pass {
+  margin-top: 10px;
+  margin-left: 240px;
+  font-size: 15px;
+  height: 19px;
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0;
+  color: #384557;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.forgot-pass:hover {
+  cursor: pointer;
+}
+
+.login-socials {
+  display: flex;
+  margin-top: 70px;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.login-button {
+  align-self: center;
+  width: 208px;
+  height: 65px;
+  background: #82d173 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 1;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Futura Md BT";
+  letter-spacing: 0;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  transition: all 0.6s ease-in-out;
+  transform: scale(1.1);
+}
+
+.social-or {
+  align-self: center;
+  width: 19px;
+  height: 22px;
+  text-align: left;
+  letter-spacing: 0;
+  color: #384557;
+  opacity: 0.8;
+  font-size: 18px;
+}
+.login-social-logos {
+  align-self: center;
+  width: 36px;
+  height: 36px;
+  background: #384557 0% 0% no-repeat padding-box;
+  opacity: 1;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.login-gmail {
+  margin-top: 10px;
+}
+
+.login-gmail-logo {
+  align-self: center;
+  font-size: 24px;
+  width: 36px;
+  height: 36px;
+  background: #384557 0% 0% no-repeat padding-box;
+  text-align: center;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.login-in-logo {
+  align-self: center;
+  width: 36px;
+  height: 36px;
+  background: #384557 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  opacity: 1;
+  font-size: 10px;
+}
+.login-in {
+  text-align: center;
+  font-size: 10px;
+}
+.fa-color {
+  color: #d5d5d5;
+}
+.logos:hover {
+  background-color: #de8015;
+}
+.forgot-main-div {
+  height: 100vh;
+  width: 100%;
+  background-color:#3E6181;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.forget-key-img {
+  width: 150px;
+  height: 150px;
+  margin-top: 150px;
+}
+.forget-key-img:hover {
+  cursor: pointer;
+}
+.forgot-pass-p {
+  font-size: 20px;
+}
+.forgot-input {
+  margin-top: 3rem;
+  width: 30rem;
+  height: 5rem;
+  border-radius: 10px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 3px 3px 20px #00000029;
+  opacity: 1;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  padding: 1.7rem;
+  font-size: 1.4rem;
+  position: relative;
+  z-index: 999999;
+}
+
+canvas {
+  display: block;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/* ----------------------------------------------- */
+/* SIGN UP PAGE */
+/* ----------------------------------------------- */
+
+.flex {
+  display: flex;
+}
+.king-sign-up-background-container {
+  flex: 1 1 55%;
+  background: url("../img/tianjin-binhai-library-china-mvrdv-5a095f15bc0b1__880@2x.jpg");
+  background-position: bottom;
+  background-size: cover;
+  mix-blend-mode: overlay;
+  position: relative;
+
+}
+.overlay-king {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #384557 0% 0% no-repeat padding-box;
+  opacity: .3;
+  z-index: -1;
+}
+.sign-up-title-container {
+  text-align: center;
+  padding-top: 7vh;
+  line-height: 1.5;
+  height: 100vh;
+}
+.sign-up-header-title {
+  font-size: 8.9rem;
+  font-family: "Futura Md BT";
+}
+.sign-up-header-parag {
+  font-family: "Futura Lt BT";
+  font-size: 3.3rem;
+  letter-spacing: 0.132rem;
+}
+.king-sign-up-form {
+  position: relative;
+  flex: 1 1 44%;
+  background: #d5d5d5 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  justify-content: center;
+  align-items: center;
+}
+.king-sign-up-form-form-container {
+  width: 70%;
+  padding-top: 12vh;
+}
+.dots {
+  background-image: radial-gradient(#fafafa 12%, transparent 18%);
+  position: absolute;
+}
+.king-sign-up-form-dots {
+  background-size: 2.3rem 2rem;
+  top: 0;
+  right: 0;
+  height: 10.3rem;
+  width: 56%;
+  opacity: 0.7;
+}
+.flex-input-sign-up {
+  display: flex;
+  align-items: center;
+  color: #384557;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 1rem;
+}
+.sign-up-input {
+  height: 5.5rem;
+  width: 100%;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0.3rem 0.3rem 2rem #00000029;
+  border-radius: 1rem;
+  opacity: 1;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 1.4rem;
+  font-size: 1.8rem;
+  border: none;
+  margin-bottom: 1.5rem;
+}
+.sign-up-last {
+  margin-bottom: 1rem;
+}
+
+.sign-up-input:focus {
+  transition: 0.3s ease-out;
+}
+input::-webkit-input-placeholder {
+  color: #384557;
+  opacity: 0.8;
+}
+input:-moz-placeholder {
+  color: #384557;
+  opacity: 0.8;
+}
+input::-moz-placeholder {
+  color: #384557;
+  opacity: 0.8;
+}
+input:-ms-input-placeholder {
+  color: #384557;
+  opacity: 0.8;
+}
+.cbx {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.cbx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+.cbx span:first-child {
+  /* border: none; */
+  position: relative;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 0.3rem;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 0.20000000298023224px solid #707070;
+  box-shadow: 0.1rem 0.1rem 0.6rem #00000029;
+  transition: all 0.2s ease;
+}
+.cbx span:first-child svg {
+  position: absolute;
+  top: 0.35rem;
+  left: 0.29rem;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1.6rem;
+  stroke-dashoffset: 1.6rem;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+  width: 1.3rem;
+  height: 1rem;
+}
+.cbx span:first-child:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: block;
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+}
+.cbx span:last-child {
+  background-color: #ffffff;
+  padding-left: 0.8rem;
+}
+.inp-cbx:checked + .cbx span:first-child {
+  background: #384557;
+  border-color: #384557;
+  animation: wave 0.2s ease;
+}
+.inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+.inp-cbx:checked + .cbx span:first-child:before {
+  transform: scale(2.2);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+.ckb-agree {
+  margin-left: 1rem;
+}
+
+@keyframes wave {
+  50% {
+    transform: scale(0.9);
+  }
+}
+.container-sign-up-form-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3rem;
+}
+.span-or {
+  color: #384557;
+  font-size: 1.8rem;
+  padding: 0 1rem;
+}
+.btn {
+  background: #82d173;
+  font-size: 2.5rem;
+  border-radius: 1rem;
+  font-family: "Futura Md BT";
+  font-weight: 500;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.sign-up-button {
+  padding: 1.5rem 5.5rem;
+  white-space: nowrap;
+}
+.sign-up-social-media a {
+  background-color: #de8015;
+  height: 3.6rem;
+  width: 3.6rem;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #d5d5d5;
+  cursor: pointer;
+}
+.sign-up-social-media a i {
+  font-size: 2.4rem;
+}
+.sign-up-social-media a:not(:last-child) {
+  margin-right: 1.2rem;
+}
+
+
+/* ----------------------------------------------- */
+/* FORM PAGE */
+/* ----------------------------------------------- */
+
+/* UTILITY CLASSES FOR*/
+.font-16 {
+    font-size: 1.85rem;
+}
+
+.font-12 {
+    font-size: 1.5rem;
+}
+
+.btn-primary {
+    outline         : none;
+    bottom          : 1rem;
+    border          : none;
+    border-radius   : 0.5rem;
+    padding         : 0.7rem 1.5rem;
+    background-color: #82D173;
+    color           : white;
+    cursor          : pointer;
+}
+
+/* END OF UTILITY CLASSES */
+.template-wrapper {
+    position: relative;
+    background-color: #D5D5D5;
+    width           : 100%;
+    height: 100vh;
+}
+
+.template-container {
+    display         : flex;
+    position        : relative;
+    justify-content : center;
+    width           : 100%;
+    background-color: transparent;
+    padding-bottom: 3rem;
+}
+
+.form-container {
+    display       : flex;
+    width         : 65.5rem;
+    margin-top    : 3rem;
+    margin-bottom : 3.5rem;
+    flex-direction: column;
+    align-items   : center;
+    background    : #F1F1F1;
+    box-shadow    : -10px 10px 20px 2px #B9B9B9;
+    position      : relative;
+}
+
+.form-one {
+    position: relative;
+    display : block;
+    height  : 100%;
+    width   : 50rem;
+}
+
+.version-number {
+    margin-top: 4.5rem;
+}
+
+.form-label,
+.ingress-label {
+    display    : flex;
+    color      : #384557;
+    font-family: 'Times New Roman', 'Regular';
+}
+
+.form-label {
+    margin-bottom: 0.8rem;
+}
+
+.ingress-label {
+    margin-bottom: 0.3rem;
+}
+
+.star {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    font-size      : 0.8rem;
+    color          : #82D173;
+    margin-right   : 0.4rem;
+}
+
+.form-textarea,
+.form-input {
+    resize       : none;
+    border       : none;
+    border-radius: 0.6rem;
+    outline      : none;
+    padding      : 1.15rem;
+    color        : #384557;
+    box-shadow   : 3px 3px 10px 0 #00000014;
+    font-family  : 'Times New Roman', 'Regular';
+}
+
+.form-textarea:focus,
+.form-input:focus {
+    box-shadow: 0 0 0 0.5px #82D173;
+}
+
+.form-input {
+    width        : 28.7rem;
+    margin-bottom: 2rem;
+    font-size    : 1.6rem;
+}
+
+.headline-input-wrapper,
+.subhead-input-wrapper {
+    position: relative;
+    display : inline;
+}
+
+.text-area-one-wrapper,
+.text-area-two-wrapper {
+    position: relative;
+}
+
+.warning,
+.empty-warning {
+    display         : flex;
+    background-color: white;
+    box-shadow      : -0.3rem 0.3rem 0.8rem 0.1rem #00000014;
+    padding         : 0.5rem;
+    border-radius   : 0.6rem;
+    position        : absolute;
+    transition      : all 1s ease-out;
+}
+
+.warning {
+    width: 33rem;
+}
+
+.empty-warning {
+    width: 20rem;
+}
+
+.warning-container {
+    display : block;
+    width   : 100%;
+    position: absolute;
+}
+
+.input-warning {
+    top : -37.5px;
+    left: 97%;
+}
+
+.input-empty-warning {
+    top : -52.5px;
+    left: 97%;
+}
+
+.text-area-empty-warning,
+.text-area-warning {
+    top : -37.5px;
+    left: 92.5%;
+}
+
+.warning i,
+.empty-warning i {
+    color    : #DC0B0B;
+    font-size: 2.5rem;
+    margin   : 0 1.5rem 0 0.3rem
+}
+
+.warning-icon {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.warning-title {
+    color    : #DC0B0B;
+    font-size: 1rem;
+}
+
+.warning-text {
+    color    : #3b495c;
+    font-size: 1rem;
+}
+
+.form-textarea {
+    width: 95%;
+}
+
+.text-area-one {
+    margin-bottom: 2.0rem;
+    font-size    : 1.5rem;
+}
+
+.text-area-two {
+    font-size: 1.5rem;
+}
+
+.sendBtn {
+    margin-top   : 7.5rem;
+    margin-bottom: 5rem;
+}
+
+/* PAGE 2 */
+
+.text-wrapper {
+    height          : auto;
+    width           : 50rem;
+    background-color: white;
+    color           : #384557;
+    padding-left    : 1.4rem;
+    padding-right   : 3.3rem;
+    margin-top      : 7.6rem;
+    box-shadow      : -8px 8px 17px 2px #B9B9B9;
+    border-radius   : 0.6rem;
+}
+
+.btn-container {
+    display        : flex;
+    width          : 50rem;
+    justify-content: flex-start;
+}
+
+.btn-wrapper {
+    display        : flex;
+    width          : 50rem;
+    justify-content: flex-start;
+}
+
+.back-btn {
+    color      : white;
+    margin-left: 2rem;
+    margin-top : 7.5rem;
+    display    : inline-block;
+}
+
+.submitBtn {
+    margin-top: 7.5rem;
+    display   : inline-block;
+}
+
+.back-btn-absolute {
+    position   : absolute;
+    margin-left: 8rem;
+}
+
+.submitBtn-absolute {
+    position: absolute;
+}
+
+.btn-container-absolute {
+    position: absolute;
+    bottom  : 0;
+}
+
+.btn-wrapper-absolute {
+    position: absolute;
+    bottom  : 10%;
+}
+
+.headline-text,
+.subhead-text {
+    word-wrap    : break-word;
+    margin-bottom: 5.5rem;
+}
+
+.headline-text {
+    word-wrap : break-word;
+    margin-top: 3.3rem;
+}
+
+.headline-ingress-text {
+    word-wrap    : break-word;
+    margin-bottom: 11.2rem;
+}
+
+.subhead-ingress-text {
+    word-wrap    : break-word;
+    margin-bottom: 5.6rem;
+}
+
+.download-icon {
+    margin-top      : 1.3rem;
+    margin-bottom   : 5rem;
+    padding         : 0.5rem 1.5rem;
+    border-radius   : 0.9rem;
+    background-color: white;
+    color           : #384557;
+    box-shadow      : 0 3px 3px 2px #00000014;
+    font-size       : 1.5rem;
+}
+
+.mb-5 {
+    margin-bottom: 5rem;
+}
+
+/* DOTS */
+.landing-dots {
+    background-image: radial-gradient(#FAFAFA 9%, transparent 18%);
+    position        : absolute;
+    background-size : 2.1rem 1.8rem;
+}
+
+.dots-text-left {
+    bottom: 0;
+    left  : 0;
+    height: 37%;
+    width : 9%;
+}
+
+.dots-text-right {
+    top   : 0;
+    right : 0;
+    height: 23%;
+    width : 7%;
+}
+
+.sign-in-icon {
+  position: absolute;
+}
+
+.g-signin2 {
+  position: absolute;
+  opacity: 0;
+  z-index: 10;
+}
+
+.abcRioButton.abcRioButtonLightBlue {
+  width: 36px!important;
+}

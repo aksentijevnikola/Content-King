@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LogIn</title>
+    <meta name="keywords" content="Project_2" />
+    <meta name="description" content="Project_2" />
+    <meta name="author" content="Project_2" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="google-signin-client_id" content="611016508967-buek12lv0e4k8dbgmkjg17fjas8kff7o.apps.googleusercontent.com">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/query.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="login-wrapper">
+      <div class="login-main-background">
+        <div class="dots dots-positioning-background"></div>
+        <p class="login-main-heading">Content King</p>
+        <p class="login-main-desc">for smart people who aren't writers</p>
+      </div>
+
+      <div class="login-form-div">
+        <div class="dots dots-positioning-form"></div>
+        <form class="Login-form">
+          <label for="email"></label><br />
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="  Email"
+          /><br />
+          <label for="Password"></label><br />
+          <input
+            type="password"
+            id="Password"
+            name="Password"
+            placeholder="  Password"
+          />
+          <label for="ForgotPass"></label><br />
+          <a href="forgot.html" class="forgot-pass">Forgot your password?</a>
+          <div class="login-socials">
+            <button class="login-button">Log In</button>
+            <h4 class="social-or">or</h4>
+            <div class="login-social-logos logos" id="login">
+              <i class="fa fa-facebook-f f-icon fa-color"></i>
+              <div id="status"></div>
+            </div>
+            <button style="display:none;" id="logout">Logout</button>           
+  
+            <div class="login-gmail-logo logos">
+              <div class="g-signin2 g-mail-login" data-onsuccess="onSignIn"></div>
+              <img src="assets/img/Login/gmail.svg" class="login-gmail fa-color" />
+            </div>
+            <!-- <a href="#" onclick="signOut();">Sign out</a> -->
+  
+            <div class="login-social-logos logos" id="linkedin-button">
+                <i class="fa fa-linkedin fa-color"></i>
+          </div>
+        </form>
+      </div>
+    </div>
+     <!-- jQuery library -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.rawgit.com/oauth-io/oauth-js/c5af4519/dist/oauth.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script>
+      $(document).ready(function(){   
+       (function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+  
+   // initialize the facebook sdk
+  
+   window.fbAsyncInit = function() {
+     FB.init({
+       appId      : '224571605557341',
+       cookie     : true,  // enable cookies to allow the server to access 
+                           // the session
+       xfbml      : true,  // parse social plugins on this page
+       version    : 'v3.1' // The Graph API version to use for the call
+     });
+  
+ }
+  
+  // add event listener on the login button
+  
+  $("#login").click(function(){
+     facebookLogin();
+  });
+ 
+  // add event listener on the logout button
+ 
+  $("#logout").click(function(){
+    $("#logout").hide();
+    $("#login").show();
+    $("#status").empty();
+    facebookLogout();
+  });
+ 
+  function facebookLogin()
+  {
+    FB.getLoginStatus(function(response) {
+        console.log(response);
+        statusChangeCallback(response);
+    });
+  }
+ 
+  function statusChangeCallback(response)
+  {
+      console.log(response);
+      if(response.status === "connected")
+      {
+         $("#login").hide();
+         $("#logout").show(); 
+         fetchUserProfile();
+      }
+      else{
+          // Logging the user to Facebook by a Dialog Window
+          facebookLoginByDialog();
+      }
+  }
+ 
+  function fetchUserProfile()
+  {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me?fields=id,name,email,gender,birthday', function(response) {
+      console.log(response);
+      console.log('Successful login for: ' + response.name);
+      var profile = `<h1>Welcome {response.name}<h1>
+       <h2>Your email is ${response.email}</h2>
+       <h3>Your Birthday is ${response.birthday}</h3>`;
+      $("#status").append(profile);
+    });
+  }
+ 
+  function facebookLoginByDialog()
+  {
+    FB.login(function(response) {   
+        statusChangeCallback(response);    
+    }, {scope: 'public_profile,email'});
+  }
+ 
+  // logging out the user from Facebook
+ 
+  function facebookLogout()
+  {
+    FB.logout(function(response) {
+        statusChangeCallback(response);
+    });
+  }
+ });
+    </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+      function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }
+    
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    }
+    </script>
+    <script>
+      $('#linkedin-button').on('click', function() {
+      // Initialize with your OAuth.io app public key
+      OAuth.initialize('cQKxj35XuGjag4wQhtvNcM0rALY');
+      // Use popup for oauth
+      OAuth.popup('linkedin2').then(linkedin => {
+        console.log('linkedin:',linkedin);
+        // Prompts 'welcome' message with User's email on successful login
+        // #me() is a convenient method to retrieve user data without requiring you
+        // to know which OAuth provider url to call
+        linkedin.me().then(data => {
+          console.log('me data:', data);
+          alert('Linkedin says your email is:' + data.email + ".\nView browser 'Console Log' for more details");
+        })
+        // Retrieves user data from OAuth provider by using #get() and
+        // OAuth provider url
+        linkedin.get('/v2/me').then(data => {
+          console.log('self data:', data);
+        })
+      });
+    })
+    </script>
+  </body>
+</html>

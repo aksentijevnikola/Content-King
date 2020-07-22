@@ -1,0 +1,83 @@
+@media only screen and (max-width: 1400px) {
+    .html {font-size: 51.5%}
+    .king-sign-up-background-container .sign-up-title-container {
+        padding-top: 10vh;
+      }    
+} 
+
+@media only screen and (max-width: 1200px) {
+    .king-sign-up-background-container .sign-up-title-container {
+      padding-top: 13vh;
+    }
+    .sign-up {
+      font-size: 48.5%;
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+    .sign-up {
+        font-size: 45.5%;
+    }
+    .king-sign-up-background-container .sign-up-title-container {
+        padding-top: 15vh;
+    }
+    .inp-cbx:checked + .cbx span:first-child svg {
+        top: 0.35rem;
+        left: 0.19rem;
+        width: 1.4rem;
+        stroke-dasharray: 2rem;
+    }
+}  
+
+@media only screen and (max-width: 991px) {
+    .heading-main {font-size: 11rem}
+    .html {font-size: 45%}
+    .king-sign-up-form .king-sign-up-form-form-container {
+        width: 80%;
+      }    
+} 
+
+@media (max-height: 915px ){
+    .template-wrapper {height: auto}
+}
+
+@media only screen and (max-width: 854px) {
+    .king-sign-up-background-container .sign-up-title-container {
+      padding-top: 20vh;
+    }
+    .sign-up {
+      font-size: 41.5%;
+    }
+}
+
+@media (max-width: 767px ){
+    .html {font-size: 37%}
+    .content-heading-h2 {
+        padding-top: 13vh;
+        padding-bottom: 8vh;
+    }
+    .king-signup-container {
+        flex-direction: column;
+    }
+    .king-sign-up-form {
+        padding: 12vh 0;
+    }
+    .sign-up {
+        font-size: 40%;
+    }    
+}
+
+@media (max-width: 525px ){
+    .heading-main {font-size: 10rem}
+    .landing-heading-h1 {margin-bottom: 5rem}
+    .landing-dots {height: 36vh}
+    .content-order {font-size: 3rem}
+    .content-links .content-order li{margin: 0 1.8rem;}
+
+    .landing-circule {
+        top: -65vh;
+        left: -46vw;
+        width: 73vw;
+        height: 105vh;
+    }
+}
